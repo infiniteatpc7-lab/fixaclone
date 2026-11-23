@@ -1,0 +1,1 @@
+import{n as e,r as t,t as n}from"./shared-lib.BDX2p2b0.mjs";n();export{t as __FramerMetadata__,e as default};
