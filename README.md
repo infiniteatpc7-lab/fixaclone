@@ -1,54 +1,46 @@
-# Fixa Planner — Exact Cloned Website
+# Fixa Planner - Next.js Clone
 
-This is the exact, pixel-perfect copy of [https://fixaplan.com/](https://fixaplan.com/) with 100% of the original structure, styles, fonts, and Framer animations preserved.
+A pixel-perfect, high-performance clone of [Fixa Planner](https://fixaplan.com), refactored into modular, native React / Next.js (App Router) JSX components with zero design regressions.
 
----
+## Features
 
-## What Is Included
+- **100% Native JSX**: Every section (`Navbar`, `Hero`, `Features`, `Difference`, `FixaAi`, `BrainNoise`, `Faq`, `Footer`, `Preloader`, `WaitlistModal`) is written in native React JSX.
+- **Easily Editable Content**: Every component exposes a structured `const CONTENT = { ... }` object at the top of the file for effortless copy and asset customization.
+- **Interactive Sticky Scroll**: Left column in the Features section sticks smoothly at `top: 100px` for 1800px+ of scroll, dynamically highlighting category pills.
+- **Interactive Components**:
+  - FAQ accordion open/close animations.
+  - Mobile burger navigation drawer.
+  - Fixa AI multi-feature tab switcher.
+  - Interactive "Join the waitlist" modal dialog with backdrop blur and email submission.
+- **Optimized Video & Assets**: 1440p Kinescope background video embed with zero layout shifts, local fonts, and self-hosted SVG/WebP assets.
+- **Clean Console**: 0 React hydration mismatches, 0 asset 404s, and clean client-side mounting.
 
-- **Exact Original DOM & Styles**: All original HTML markup, inline styles, CSS variables, and layout systems.
-- **Full Original Animations**:
-  - Buttery smooth scrolling powered by **Lenis**.
-  - Framer Motion scroll-triggered reveals and transitions.
-  - Interactive Anxiety and Productivity count-up animations.
-  - Interactive FAQ expandable/collapsible accordions.
-  - Sticky floating navigation bar with backdrop blur.
-- **Complete Local Assets**:
-  - Fonts: Instrument Serif italic and Switzer geometric typography (`fonts.gstatic.com`, `framerusercontent.com/assets`).
-  - Graphics & Media: All SVGs, icons, high-res WebP card graphics, and Kinescope 1440p hero video embed.
-  - Framer JavaScript bundles: Downloaded locally to `framerusercontent.com/sites/` so the site runs completely self-contained.
+## Tech Stack
 
----
+- **Framework**: Next.js (App Router)
+- **Language**: TypeScript
+- **Animation**: Framer Motion
+- **Styling**: Vanilla CSS (`globals.css`) preserving exact Framer styling rules and tokens
 
-## How to Run Locally
+## Getting Started
 
-### Option 1: Using Node.js (Recommended)
-
-1. Start the local server:
-   ```bash
-   npm start
-   ```
-2. Open your browser at:
-   ```
-   http://localhost:3000/
-   ```
-
-### Option 2: Using Python
+### 1. Install dependencies
 
 ```bash
-python -m http.server 3000
+npm install
 ```
-Then visit `http://localhost:3000/`.
 
----
+### 2. Run development server
 
-## Directory Structure
-
+```bash
+npm run dev
 ```
-├── index.html               # Main entry point (exact Fixa Planner website)
-├── server.js                # Zero-dependency local Node.js server with proper MIME types
-├── package.json             # NPM package scripts (npm start, npm run dev)
-├── framerusercontent.com/   # Images, icons, WebP graphics, and Framer JS runtime modules
-├── fonts.gstatic.com/       # Instrument Serif font files
-└── unpkg.com/               # Lenis smooth scroll CSS
+
+Open [http://localhost:3000](http://localhost:3000) to view the application.
+
+### 3. Build for production
+
+```bash
+npm run build
+npm run start
 ```
